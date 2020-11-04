@@ -4,19 +4,129 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 id="title">What inspires you?</h1>
-    <p id="description">This surveys is to gather data on what things inspires individuals in life. Take inspiration, in this survey, as the source(s) that gets you going in your day, keeps you focus and stirs perseverance</p>
+    <div class="container">
+    <header>
+        <h1 id="title">What inspires you?</h1>
+        <p id="description">This surveys is to gather data on what things inspires individuals in life</p>
+    </header>
     <form id ="survey-form">
-        <label id="name-label" for="name">Name
-            <input id="name" type="text" placeholder="name of the survey taker" required>
-        </label>
-        <label id="email-label" for="email">Email
-            <input id="email" type="text" placeholder="email of the survey taker"required>
-        </label>
-        <label id="number-label" for="number">Age
-            <input id="number" type="text" placeholder="age of the survey taker" required>
-        </label>
+        <div class="form-group">
+            <label id="name-label" for="name">Name</label>
+            <input id="name" type="text" placeholder="your name" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label id="email-label" for="email">Email</label>
+            <input id="email" type="text" placeholder="your email" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label id="number-label" for="number">Age</label>
+            <input id="number" type="number" placeholder="your age (years)" min="0" max="100" class="form-control" required>
+        </div>  
+        <div class="form-group">
+            <p>What best describes your current living arrangement?</p>
+            <select id="dropdown" name="housing" class="form-control">
+                <option value="own">Own housing</option>
+                <option value="rent">Rent housing</option>
+                <option value="parents">Live with parents</option>
+                <option value="other">None of the above</option>
+            </select>
+        </div>  
+        <div class="form-group">
+            <p id="question1">How motivated are you on a daily basis?</p>
+            <label>
+                <input value="always" type="radio" name="daily" class="input-gui">
+                Always
+            </label>
+            <label>
+                <input value="most" type="radio" name="daily" class="input-gui">
+                Most of the time
+            </label>
+            <label>
+                <input value="sometimes" type="radio" name="daily" class="input-gui">
+                Sometimes
+            </label>
+            <label>
+                <input value="notmuch" type="radio" name="daily" class="input-gui">
+                Not much
+            </label>
+            <label>
+                <input value="never" type="radio" name="daily" class="input-gui">
+                Never
+            </label>
+        </div>
+        <div class="form-group">  
+            <p id="question2">What inspires you? Select all the options that apply to you.</p>
+            <label>
+                <input value="love" type="checkbox" name="main" class="input-gui">
+                Love
+            </label>
+            <label for="community">
+                <input value="community" type="checkbox" name="main" class="input-gui">
+                Community
+            </label>
+            <label>
+                <input value="friends" type="checkbox" name="main" class="input-gui">
+                Friends
+            </label>
+            <label>
+                <input value="music" type="checkbox" name="main" class="input-gui">
+                Music
+            </label>
+            <label>
+                <input value="charity" type="checkbox" name="main" class="input-gui">
+                Charity
+            </label>
+            <label>
+                <input value="leadership" type="checkbox" name="main" class="input-gui">
+                Leadership
+            </label>
+            <label>
+                <input value="sports" type="checkbox" name="main" class="input-gui">
+                Sports
+            </label>
+            <label>
+                <input value="friendliness" type="checkbox" name="main" class="input-gui">
+                Friendliness
+            </label>
+            <label>
+                <input value="teachers" type="checkbox" name="main" class="input-gui">
+                Teachers
+            </label>
+            <label>
+                <input value="dreams" type="checkbox" name="main" class="input-gui">
+                Dreams
+            </label>
+            <label>
+                <input value="beauty" type="checkbox" name="main" class="input-gui">
+                Beauty
+            </label>
+            <label>
+                <input value="faith" type="checkbox" name="main" class="input-gui">
+                Faith
+            </label>
+            <label>
+                <input value="parents" type="checkbox" name="main" class="input-gui">
+                Parents
+            </label>
+            <label>
+                <input value="survival" type="checkbox" name="main" class="input-gui">
+                Survival
+            </label>
+            <label>
+                <input value="deadlines" type="checkbox" name="main" class="input-gui">
+                Deadlines
+            </label>
+            <label>
+                <input value="internet" type="checkbox" name="main" class="input-gui">
+                The Internet
+            </label>
+        </div>
+        <div class="form-group">
+            <p>Comments (optional)</p>
+            <textarea id="comments" name="comments" placeholder="Enter your comment" class="form-control"></textarea>
+        </div>  
         <button type="submit" id="submit">Submit</button>
     </form>
+</div>
 </body>
 </html>
